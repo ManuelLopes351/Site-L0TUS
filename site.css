@@ -1,0 +1,138 @@
+*{
+margin: 0;
+padding: 0;
+text-align: center;
+box-sizing: border-box;
+font-family: "Unbounded", sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 200vh;
+    background-image:url(images/marble.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+body{
+min-height: 50vh;
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+background-color: aliceblue;
+}
+
+
+
+h1{
+    font-size: 5em;
+    margin-top: 5px;
+    align-items: center;
+}
+
+nav{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+nav ul li{
+    list-style: none; 
+    display: inline-block;
+    margin-inline: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 0 55px 0 55px;
+}
+
+.container#blur.active{
+    filter: blur(20px);
+}
+
+ion-icon{
+    list-style: none;
+    display: inline-block;
+    margin-inline: center;
+}
+
+.card{
+    width: 300px;
+    height: 150px;
+    display: inline-block;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+}
+
+.card1{
+    background-image: url(images/devious.png);
+}
+.card1:hover{
+    background-image: url(gifs/devious.gif) ;
+
+}
+
+.card2{
+    background-image: url(images/mutant.png);
+}
+.card2:hover{
+    background-image: url(gifs/mutant.gif) ;
+}
+
+.card3{
+    background-image: url(images/shelby.png);
+}
+.card3:hover{
+    background-image: url(gifs/shelby.gif) ;
+}
+
+.card4{
+    background-image: url(images/cube.png);
+}
+.card4:hover{
+    background-image: url(gifs/cube.gif) ;
+}
+
+.card5{
+    background-image: url(images/cortana.png);
+}
+.card5:hover{
+    background-image: url(gifs/cortana.gif) ;
+}
+
+.card6{
+    background-image: url(images/anim.png);
+}
+.card6:hover{
+    background-image: url(gifs/anim.gif) ;
+}
+
+.card7{
+    background-image: url(images/quadro.png);
+}
+.card7:hover{
+    background-image: url(gifs/quadro.gif) ;
+}
+
+.card8{
+    background-image: url(images/igreja.png);
+}
+.card8:hover{
+    background-image: url(gifs/igreja.gif) ;
+}
+
+.icons{
+    display: block;
+    background-position: unset;   
+}
+
+
+
+
