@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Porfolio L0TUS </title>
+        <link rel="stylesheet" href="site.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap">
+    </head>
+
+<body>
+<div class="container">
+  <div class="collect">
+  <h1>L0TUS</h1>
+  <nav>
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li><a href="">CONTACTS</a></li>
+      <li><a href="#" onclick="toggle()">ABOUT</a></li>
+      </ul>
+  </nav>
+</div>
+<script type="text/javascript">
+  function toggle(){
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('active')
+  }
+</script>
+
+<!--png and gif cards-->
+<div class="col">
+  <div class="card card1"></div>
+  <div class="card card2"></div>
+  <div class="card card3"></div>
+  <div class="card card4"></div>
+  <div class="card card5"></div>
+  <div class="card card6"></div> 
+  <div class="card card7"></div> 
+  <div class="card card8"></div> 
+  </div>
+</div>
+</div>
+
+ <!--video section-->
+<!--<div class= "video">
+<div class="popup-video">
+  <span>&times;</span>
+<video src="videos/devious.mp4" autoplay controls></video>
+<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Dolore</h1>
+</div>-->
+
+</div>
+
+<!--social media icons-->
+<div class="icons">
+  <a href="http://instagram.com/l0tus231/" target="_blank">
+    <ion-icon name="logo-instagram"></ion-icon>
+    <ion-icon size="large"></ion-icon>
+  </a>
+  <a href="https://www.linkedin.com/in/manuel-lopes-36580217b/" target="_blank">
+    <ion-icon name="logo-linkedin"></ion-icon>
+    <ion-icon size="large"></ion-icon>
+  </a>
+  <a href="https://www.behance.net/manuellopes7" target="_blank">
+    <ion-icon name="logo-behance"></ion-icon>
+    <ion-icon size="large"></ion-icon>
+  </a>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
+
+<!--videopopup on click-->
+<script>
+  document.querySelectorAll('.video'), forEach(vid => {
+    vid.onclick = () =>{
+      document.querySelector('.popup-video').style-display = 'block';
+      document.querySelector('.popup-video video').src = vid.getAttribute('src');
+    }
+  });
+
+  document.querySelector('.popup-video span').onclick = () =>{
+    document.querySelector('.popup-video').style-display = 'none';
+  }
+  </script>
+</body>    
+
+</html>
