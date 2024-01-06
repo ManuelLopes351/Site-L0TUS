@@ -5,7 +5,10 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>L0TUS </title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
     </head>
 
 <body>
@@ -14,42 +17,60 @@
   <h1>L0TUS</h1>
   <nav>
     <ul>
-      <li><a href="#">MUSIC</a></li>
-      <li><a href="#">DESIGN</a></li>
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="design.html">DESIGN</a></li>
       <li><a href="#">HOME</a></li>
-      <li><a href="#" onclick="toggle()">ABOUT</a></li>
-      <li><a href="#">CONTACTS</a></li>
+      <li><a href="about.html" onclick="toggle()">ABOUT</a></li>
+      <li><a href="contacts.html">CONTACTS</a></li>
       </ul>
   </nav>
   <hr></hr>
+  <section aria-label="Project photos">
+    <div class="caroussel">
+      <button class="caroussel-button prev" data-caroussel-button="prev">&#x0354;</button>
+      <button class="caroussel-button next" data-caroussel-button="next">&#x0355;</button>
+    <ul>
+      <li class =slide data-active>
+        <img src="images/cortana.png">
+      </li>
+      <li class =slide>
+        <img src="images/anim.png">
+      </li>
+      <li class =slide>
+        <img src="images/cube.png">
+      </li>
+    </ul>
+  </div>
+  <h2>Main projects</h2>
+  </section>
 </div>
 
-<div class="texterright">
-  
-  <h2 class="titler1">Marbles</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Voluptate vel adipisci fugit, fugiat facere dolorem sapiente dicta blanditiis deleniti! Culpa aperiam laborum officiis expedit
-      a blanditiis reiciendis minima animi qui nemo quisquam labore neque ducimus non in asperiores eius, laboriosam, doloremque s
-      imilique impedit perferendis a esse libero facere voluptates. Neque distinctio beatae voluptas totam quo. Maiores ullam, vitae 
-      error quisquam nostrum eveniet perspiciatis, dicta tempore quam iste, facere ipsa optio exercitationem. In nesciunt corrupti qu
-      idem at natus dolor, quos deserunt quas mollitia praesentium a magnam rerum ipsam non, odio aut officia! Illum error quo deseru
-      nt quidem qui inventore voluptatem laboriosam quia.z</p>
+<div class="main-grid">
+  <div class="text text1">
+  <h3 class="title1">Construção</h3>
+    <p class="para">Banda desenhada com o tema de Chico Buarque “Construção” em mente com palete de cores maioritariamente tons de cinza. 
+      Adicionalmente são cores quentes como laranja e vermelho para dar uma identidade às personagens e reforçar o momento mais 
+      trágico da história. Para representar a mecanização da personagem principal, as cores quentes que personificam a personagem 
+      principal são gradualmente retiradas.</p>
       
   </div>
-<div class="texterleft">
-  <h2 class="titlel1">Mutants</h2>
-  <p class="paral1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  <img class="text img-big-1" src="images/construction.png">
+
+  <div class="text text2">
+  <h3 class="title2">Mutants</h3>
+  <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Voluptate vel adipisci fugit, fugiat facere dolorem sapiente dicta blanditiis deleniti! Culpa aperiam laborum officiis expedit
     a blanditiis reiciendis minima animi qui nemo quisquam labore neque ducimus non in asperiores eius, laboriosam, doloremque s
     imilique impedit perferendis a esse libero facere voluptates. Neque distinctio beatae voluptas totam quo. Maiores ullam, vitae 
     error quisquam nostrum eveniet perspiciatis, dicta tempore quam iste, facere ipsa optio exercitationem. In nesciunt corrupti qu
     idem at natus dolor, quos deserunt quas mollitia praesentium a magnam rerum ipsam non, odio aut officia! Illum error quo deseru
-    nt quidem qui inventore voluptatem laboriosam quia.z</p>
+    nt quidem qui inventore voluptatem laboriosam quia.</p>
     
+  </div>
+  <img class="text img-big-2" src="images/mutant.png">
+
+  
 </div>
-
-
-
 
 <!--social media icons-->
 <div class="icons">

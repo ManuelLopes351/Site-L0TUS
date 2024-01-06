@@ -1,27 +1,48 @@
+@font-face {
+    src: url(fonts/Dash-Horizon-Demo.otf);
+    font-family: dasher;
+}
+
+@media screen and (max-width: 1024px){
+    .main-grid{
+        --num-cols:1;
+        --row-height: 100px;
+    }
+}
+
+
 *{
     padding: 0;
+    
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Darker Grotesque', sans-serif;
 }
 body{
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
     padding: 0px;
     text-align: center;
 }
 h1{
     
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: dasher;
+    font-size: 40px;
+}
+
+h2{
+    margin-bottom: 80px;
+    font-family: dasher;
+    font-size: 50px;
 }
 
 nav ul li{
     list-style:none;
     text-decoration: none;
     display: inline-block;
-    margin: 10px 20px;
+    margin: 5px 60px;
    /* margin-right: 110px;
     min-width: 450px;
     max-width: 1920px;*/
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 nav ul li a{
@@ -30,10 +51,13 @@ nav ul li a{
     font-size: 20px;
     font-weight: lighter;
     position: relative;
+    font-family: dasher;
 
+    /*hover animation*/
     text-shadow: -.25px -.25px 0 transparent, 
                   .25px .25px transparent;
     margin: 0 4px;
+    
 }
 
 /*nav ul li a::after{
@@ -49,45 +73,188 @@ nav ul li a:hover{
 
 hr {
     border-top: 1px solid rgb(0, 0, 0);
-  }
+}
+
+/* main project titles */
+h3{
+    font-family: dasher;
+    text-align: left;
+    font-size: 80px;
+}
+
+.caroussel{
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    margin-top: 100px;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide > img{
+    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.caroussel-button{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(234, 243, 245,.5);
+    border-radius: .25rem;
+    padding: 10 10rem;
+    padding-top: 15rem;
+    padding-bottom: 20rem;
+    /*background-color: rgba(0,0,0,.1);*/
+}
+
+.caroussel-button.prev{
+    left: 0.5rem;
+}
+
+.caroussel-button.next{
+    right: 0.5rem;
+}
+
+
+.main-grid{
+    --gap: 16px;
+    --num-cols:4;
+    --row-height: 300px;
+    display: grid;
+
+    padding: var(--gap);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-template-rows: repeat(6,var(--row-height));
+    
+}
+
+
 
 /* text with marble*/
-.texterright{
-    display: flex;
-    align-items: left;
-    text-align: left;
-    max-width: 450px;
-    padding-top: 10px;
-    padding-bottom: 200px;
-}
-.parar1{
-    height: 200px;
-    min-width: 450px;
+
+.para{
     text-align: left;
     padding-right: 20px;
-}
-.imgr1{
-    text-align: right;
-    min-width: 400px;
-    min-height: 400px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
 }
 
 
-/*.texterleft{
-    display: flex;
-    align-items: center;
-    text-align: left;
-    max-width: 450px;
-    padding-bottom: 200px;
+
+.text{
+    justify-self: center; /* Horizontally center the image within its grid area */
+    align-self: center;
+    grid-row: span 2;
+    grid-column: span 2;
+    width: 80%;
+    height: 80%;
+}
+
+
+.img-big{
+    width: 60%;
+    height: 60%;
+    grid-column: span 2;
+    grid-row: span 2;
+    justify-self: center; /* Horizontally center the image within its grid area */
+    align-self: center;
     
-}*/
-
-
-
-.imgl1{
-
-    min-width: 400px;
-    min-height: 400px;
-    float: right;
 }
 
+.img-big-2{
+    width: 80%;
+    height: 80%;
+    grid-column: span 2;
+    grid-row: 3/5;
+    justify-self: center; /* Horizontally center the image within its grid area */
+    align-self: center;
+    
+}
+
+/*design page*/
+.design-grid{
+    align-items: center;
+    --gap: 16px;
+    --num-cols:4;
+    --row-height: 300px;
+    display: grid;
+    padding: var(--gap);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-template-rows: repeat(6,var(--row-height));
+    margin:2rem;
+    position: absolute;
+}
+
+img-d{
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+
+}
+
+img-d:hover {
+    -webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(3px);
+}
+
+
+/* music page */
+
+.play{
+    --gap: 16px;
+    --num-cols:4;
+    --row-height: 300px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-template-rows: repeat(6,var(--row-height));
+    margin: 3rem;
+}
+
+.playlists>.para{
+    font-size: 30px;
+    grid-column: 1/3;
+    grid-row: span 2;
+}
+
+.text-music{
+    margin: 3rem;
+    text-align: left;
+}
+
+
+
+.para > .par1 {
+    grid-column: 1/3;
+    grid-row: span 2;
+    font-size: 100px;
+}
+
+frame{
+    grid-column: span 4;
+    grid-row: span 2;
+}
